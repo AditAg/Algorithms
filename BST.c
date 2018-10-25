@@ -13,9 +13,8 @@ struct stack{
 
 struct node *minx(struct node *root){
     struct node *x=root;
-    while(x->left->left!=NULL){
+    while(x->left->left!=NULL)
         x=x->left;
-    }
     return x;
 }
 
@@ -156,7 +155,7 @@ void inorder(struct node *root){
             st.s[st.top]=current->key;
             current=current->left;}
         else{
-            if(st.top!=-1){
+            if(st.top != -1){
                 current=pop(&st,root);
                 printf("%d\n",current->key);
                 current=current->right;
@@ -211,7 +210,7 @@ int main()
 
 
         }
-    }while(choice<=4 && choice>=1);
+    }while(choice <= 4 && choice >= 1);
 
     return 0;
 }
